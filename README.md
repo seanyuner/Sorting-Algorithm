@@ -64,7 +64,7 @@ Since [hustcc](https://github.com/hustcc) had a great [explanation and sorting p
 
 - [insertion sort](https://github.com/seanyuner/Sorting-Algorithm/blob/master/sort.py#L100-L110)，插入排序。将数组视为两部分，左侧排好序，右侧未排序（初始时将数组第一个元素视为已排序），每次循环时选取未排序部分第一个元素，然后对已排序部分从右往左扫描，找到大小合适的位置后将所选元素放置。实现时一般采用只占用O(1)空间的方法，在从后往前扫描过程中，需要反复把已排序元素向后挪位，为新元素留出空间。
 <p align='center'>
-<img src=Images/Insertion_sort_animation.gif>
+<img src=Images/Insertion_sort.gif>
 </p>
 
 - [shell sort](https://github.com/seanyuner/Sorting-Algorithm/blob/master/sort.py#L113-L126)，希尔排序，又名缩小增量排序。插入排序的改良版，主要解决其每次移动时只能移动一位的低效性。希尔排序通过将数组分为若干个区域来加速排序，每个区域内数的index差即gap值（‘增量’之意）是相同的，先选取较大的gap，可以让元素以较大的步伐移向正确位置附近，逐步递减，至gap为1时就是移位不大于一的插入排序了。

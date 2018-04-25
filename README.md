@@ -1,5 +1,7 @@
 # 15 Sorting Algorithms on 6 Different Arrays with 3 Different orders of magnitude data
 
+I write some [sorting algorithms](https://github.com/seanyuner/Sorting-Algorithm/blob/master/sort.py) and [visualize their comparison](https://github.com/seanyuner/Sorting-Algorithm/blob/master/comparation_sorting_algos.ipynb).
+
 ![overall](https://github.com/seanyuner/Sorting-Algorithm/blob/master/Images/overall.png)
 
 **15 sorting algorithms:**

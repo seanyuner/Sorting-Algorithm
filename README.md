@@ -45,7 +45,7 @@ Since [hustcc](https://github.com/hustcc) had a great [explanation and sorting p
 <\p>
 - [cocktail sort](https://github.com/seanyuner/Sorting-Algorithm/blob/master/sort.py#L15-L31)，鸡尾酒排序，又叫搅拌排序、涟漪排序等。冒泡排序的一个改进版，可将数组看作三部分，左侧已排好序的小数部分，右侧已排好序的大数部分，中间为未排序部分，在每次遍历时不仅从左往右‘上浮’最大值，而且从右往左‘下沉’最小值。
 <p align='center'>
-![Sorting_shaker_sort](https://github.com/seanyuner/Sorting-Algorithm/blob/master/Images/Sorting_shaker_sort_anim.gif)
+<img src=Images/Sorting_shaker_sort_anim.gif>
 <\p>
 - [comb sort](https://github.com/seanyuner/Sorting-Algorithm/blob/master/sort.py#L34-L50)，梳排序。也是冒泡排序的一个改良，和下述希尔排序的思想类似，即改变冒泡排序中每次都是比较相邻值的方法，比较距离从大到小（一般取1.3倍递减率为优，程序中乘法比较快，约等于递增0.8倍）。其旨在消除冒泡排序中的[乌龟](https://www.wikiwand.com/en/Bubble_sort#/Rabbits_and_turtles)（数组尾部的小数值,这些数是造成冒泡排序缓慢的主因）。
 <p align='center'>

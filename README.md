@@ -77,25 +77,25 @@ Since [hustcc](https://github.com/hustcc) had a great [explanation and sorting p
 <img src=Images/Sorting_gnomesort_anim.gif>
 </p>
 
-- [merge sort](https://github.com/seanyuner/Sorting-Algorithm/blob/master/sort.py#L142-L163)，归并排序。[分治法](https://en.wikipedia.org/wiki/Divide_and_conquer_algorithm)的典型应用，1945年由冯·诺伊曼首次提出。将数组不断分解至1/2个相邻元素，然后对其进行排序，再将相邻的两组1/2个元素的小组进行合并，不断合并左右部分直至所有元素排序完毕。
+- [merge sort](https://github.com/seanyuner/Sorting-Algorithm/blob/master/sort.py#L142-L164)，归并排序。[分治法](https://en.wikipedia.org/wiki/Divide_and_conquer_algorithm)的典型应用，1945年由冯·诺伊曼首次提出。将数组不断分解至1/2个相邻元素，然后对其进行排序，再将相邻的两组1/2个元素的小组进行合并，不断合并左右部分直至所有元素排序完毕。
 <p align='center'>
 <img src=Images/Merge_sort_animation2.gif>
 </p>
 
-- [quick sort](https://github.com/seanyuner/Sorting-Algorithm/blob/master/sort.py#L166-L193)，快速排序。首先在数组中选出一个元素作为pivot，遍历数组使小于该值的元素放在其左侧，大于该值的元素放在其右侧（相等的元素左右均可），递归地对左右部分进行排序。其每一次迭代至少会将一个元素放在其正确的位置，也因此必然会结束迭代。
+- [quick sort](https://github.com/seanyuner/Sorting-Algorithm/blob/master/sort.py#L167-L194)，快速排序。首先在数组中选出一个元素作为pivot，遍历数组使小于该值的元素放在其左侧，大于该值的元素放在其右侧（相等的元素左右均可），递归地对左右部分进行排序。其每一次迭代至少会将一个元素放在其正确的位置，也因此必然会结束迭代。
 <p align='center'>
 <img src=Images/Sorting_quicksort_anim.gif>
 </p>
 
-- [heap sort](https://github.com/seanyuner/Sorting-Algorithm/blob/master/sort.py#L196-L-240)，堆排序。利用[堆](https://en.wikipedia.org/wiki/Heap_(data_structure))这种数据结构所设计的一种排序算法，可以看作是选择排序的一种：将数组分为未排序和已排序两部分，然后在未排序部分寻找最大值，下次循环将其列入已排序部分。首先自下而上（从最后一个有孩子节点到根节点）建立大顶堆，然后迭代将堆顶（最大值）和堆的末位进行交换（同时将其视为已排序部分，不再算在堆内），自上而下调整堆（实质上第一步中对每一个节点也存在自上而下调整堆）。
+- [heap sort](https://github.com/seanyuner/Sorting-Algorithm/blob/master/sort.py#L197-L-245)，堆排序。利用[堆](https://en.wikipedia.org/wiki/Heap_(data_structure))这种数据结构所设计的一种排序算法，可以看作是选择排序的一种：将数组分为未排序和已排序两部分，然后在未排序部分寻找最大值，下次循环将其列入已排序部分。首先自下而上（从最后一个有孩子节点到根节点）建立大顶堆，然后迭代将堆顶（最大值）和堆的末位进行交换（同时将其视为已排序部分，不再算在堆内），自上而下调整堆（实质上第一步中对每一个节点也存在自上而下调整堆）。
 <p align='center'>
 <img src=Images/Sorting_heapsort_anim.gif>
 </p>
 
-- [counting sort](https://github.com/seanyuner/Sorting-Algorithm/blob/master/sort.py#L243-L261)，计数排序。计数排序不是基于比较的排序，是一种稳定的线性时间排序算法。其需要一个额外的数组来记录待排数组中从最小值至最大值间每个数字出现的次数，以空间来换取时间，最后遍历记录数组将待排数组元素排入相应位置。当整数的范围特别大的时候，空间占用太大，效率会降低。
+- [counting sort](https://github.com/seanyuner/Sorting-Algorithm/blob/master/sort.py#L248-L266)，计数排序。计数排序不是基于比较的排序，是一种稳定的线性时间排序算法。其需要一个额外的数组来记录待排数组中从最小值至最大值间每个数字出现的次数，以空间来换取时间，最后遍历记录数组将待排数组元素排入相应位置。当整数的范围特别大的时候，空间占用太大，效率会降低。
 
 
-- [bucket sort](https://github.com/seanyuner/Sorting-Algorithm/blob/master/sort.py#L264-L280)，桶排序。现申请一定数量的桶（数组），然后按照预设的映射函数，遍历待排数组将每个元素分配到相应的桶中，再对每个桶中的元素进行排序（快速排序、插入排序等），最后将各桶中的元素按序组合即可。其和下方的基数排序有一些类似。若要达到较高的效率，映射函数需要保证每个桶中的元素个数尽量相等。
+- [bucket sort](https://github.com/seanyuner/Sorting-Algorithm/blob/master/sort.py#L269-L285)，桶排序。现申请一定数量的桶（数组），然后按照预设的映射函数，遍历待排数组将每个元素分配到相应的桶中，再对每个桶中的元素进行排序（快速排序、插入排序等），最后将各桶中的元素按序组合即可。其和下方的基数排序有一些类似。若要达到较高的效率，映射函数需要保证每个桶中的元素个数尽量相等。
 <p align='center'>
 <img src=Images/Bucket_sort_1.svg.png>
 </p>
@@ -103,7 +103,7 @@ Since [hustcc](https://github.com/hustcc) had a great [explanation and sorting p
 <img src=Images/Bucket_sort_2.svg.png>
 </p>
 
-- [radix sort](https://github.com/seanyuner/Sorting-Algorithm/blob/master/sort.py#L283-L291)，基数排序。和桶排序同属于分布式排序，其历史可以追溯到1887年Herman Hollerith在打孔卡片制表机(Tabulation Machine)上的贡献。比如对于常见的十进制数据，其先遍历数组，按照个位数将每个元素分配到0-9十个桶中，然后将各桶中的元素按序组合，再遍历组合后的数组，按照十位数将每个元素分配到0-9十个桶中，然后将各桶中的元素按序组合...，到最高位后即完成排序。上述方法是最低位优先法（LSD, least significant digit），也可以从最高为开始：最高位优先法（MSD, most significant digit）。
+- [radix sort](https://github.com/seanyuner/Sorting-Algorithm/blob/master/sort.py#L288-L295)，基数排序。和桶排序同属于分布式排序，其历史可以追溯到1887年Herman Hollerith在打孔卡片制表机(Tabulation Machine)上的贡献。比如对于常见的十进制数据，其先遍历数组，按照个位数将每个元素分配到0-9十个桶中，然后将各桶中的元素按序组合，再遍历组合后的数组，按照十位数将每个元素分配到0-9十个桶中，然后将各桶中的元素按序组合...，到最高位后即完成排序。上述方法是最低位优先法（LSD, least significant digit），也可以从最高为开始：最高位优先法（MSD, most significant digit）。
 
 - sorted (python3 build in Timsort)。Timsort是Tim Peters于2012年设计的排序算法，其源自归并排序和插入排序，python自2.3版本以来一直使用该算法作为其标准排序算法。该算法排序单位不是单个元素，而是数组中已排好序的子序列，称为run，先找到这些run，再按规则merge这些run并保存到栈中，直至成为一个run即完成排序，具体算法可参见[Timsort wikipedia](https://en.wikipedia.org/wiki/Timsort).
 <p align='center'>

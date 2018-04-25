@@ -39,26 +39,33 @@ Since [hustcc](https://github.com/hustcc) had a great [explanation and sorting p
 
 ## 算法简单阐述
 > 这里以目标序列为递增序列为例说明
-- [bubble sort](https://github.com/seanyuner/Sorting-Algorithm/blob/master/sort.py#L1-L12)
-
-
-- [cocktail sort](https://github.com/seanyuner/Sorting-Algorithm/blob/master/sort.py#L15-L31)
-
+- [bubble sort](https://github.com/seanyuner/Sorting-Algorithm/blob/master/sort.py#L1-L12)，冒泡排序。可将数组视为左侧未排序和右侧已排序两部分（刚开始时全部为未排序），每轮遍历在未排序部分从左往右依次比较两相邻值大小，左边值大则交换位置，则每次遍历后，最大值会自然‘上浮’至未排序部分最右侧，下次遍历时将该值作为已排好序部分第一个元素，循环至未排序部分只剩一个元素则完成排序。可以在每轮遍历时设置一个flag，如果该轮没有发生元素交换，则说明数组已经排好序，可提前结束循环。
+![Bubble-sort](https://github.com/seanyuner/Sorting-Algorithm/blob/master/Images/Bubble-sort.gif)
+- [cocktail sort](https://github.com/seanyuner/Sorting-Algorithm/blob/master/sort.py#L15-L31)，鸡尾酒排序，又叫搅拌排序、涟漪排序等。
 
 - [comb sort](https://github.com/seanyuner/Sorting-Algorithm/blob/master/sort.py#L34-L50)
-
 
 - [selection sort](https://github.com/seanyuner/Sorting-Algorithm/blob/master/sort.py#L53-L63)
 
 - [double selection_sort](https://github.com/seanyuner/Sorting-Algorithm/blob/master/sort.py#L66-L97)
+
 - [insertion sort](https://github.com/seanyuner/Sorting-Algorithm/blob/master/sort.py#L100-L111)
+
 - [shell sort](https://github.com/seanyuner/Sorting-Algorithm/blob/master/sort.py#L114-L127)
+
 - [gnome sort](https://github.com/seanyuner/Sorting-Algorithm/blob/master/sort.py#L130-L140)
+
 - [merge sort](https://github.com/seanyuner/Sorting-Algorithm/blob/master/sort.py#L143-L164)
+
 - [quick sort](https://github.com/seanyuner/Sorting-Algorithm/blob/master/sort.py#L167-L194)
+
 - [heap sort](https://github.com/seanyuner/Sorting-Algorithm/blob/master/sort.py#L197-L-241)
+
 - [counting sort](https://github.com/seanyuner/Sorting-Algorithm/blob/master/sort.py#L244-L262)
+
 - [bucket sort](https://github.com/seanyuner/Sorting-Algorithm/blob/master/sort.py#L265-L281)
+
 - [radix sort](https://github.com/seanyuner/Sorting-Algorithm/blob/master/sort.py#L284-L292)
+
 - sorted (python3 build in [timsort](https://en.wikipedia.org/wiki/Timsort))
 

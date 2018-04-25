@@ -49,7 +49,7 @@ Since [hustcc](https://github.com/hustcc) had a great [explanation and sorting p
 <img src=Images/Sorting_shaker_sort_anim.gif>
 </p>
 
-- [comb sort](https://github.com/seanyuner/Sorting-Algorithm/blob/master/sort.py#L34-L50)，梳排序。也是冒泡排序的一个改良，和下述希尔排序的思想类似，即改变冒泡排序中每次都是比较相邻值的方法，比较距离从大到小（一般取1.3倍递减率为优，程序中乘法比较快，约等于递增0.8倍）。其旨在消除冒泡排序中的[乌龟](https://www.wikiwand.com/en/Bubble_sort#/Rabbits_and_turtles)（数组尾部的小数值,这些数是造成冒泡排序缓慢的主因）。
+- [comb sort](https://github.com/seanyuner/Sorting-Algorithm/blob/master/sort.py#L34-L50)，梳排序。也是冒泡排序的一个改良，和下述希尔排序的思想类似，即改变冒泡排序中每次都是比较相邻值的方法，比较距离从大到小（一般取1.3倍递减为优，程序中乘法比较快，约等于递增0.8倍）。其旨在消除冒泡排序中的[乌龟](https://www.wikiwand.com/en/Bubble_sort#/Rabbits_and_turtles)（数组尾部的小数值,这些数是造成冒泡排序缓慢的主因）。
 <p align='center'>
 <img src=Images/Comb_sort_demo.gif>
 </p>

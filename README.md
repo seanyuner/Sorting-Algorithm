@@ -4,7 +4,7 @@ I write some [sorting algorithms](https://github.com/seanyuner/Sorting-Algorithm
 
 Since [hustcc](https://github.com/hustcc) had a great [explanation and sorting progress visualation](https://github.com/hustcc/JS-Sorting-Algorithm) of the main algorithms, I will focus on their comparison.
 
-![overall](https://github.com/seanyuner/Sorting-Algorithm/blob/master/Images/overall_.png)
+![overall](https://github.com/seanyuner/Sorting-Algorithm/blob/master/Images/overall.png)
 
 **15 sorting algorithms:**
 - bubble sort

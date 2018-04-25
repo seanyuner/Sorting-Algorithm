@@ -99,7 +99,6 @@ def double_selection_sort(array):
 
 # 插入排序
 def insertion_sort(array):
-
     count = len(array)
     for i in range(1, count):  # 列表左侧已排好序，右侧逐个插入左侧合适处， 扑克牌
         pre_index = i - 1

@@ -141,26 +141,27 @@ def gnome_sort(array):
 
 # 归并排序
 def merge_sort(array):
-    count = len(array)
     if count <= 1:  # 递归终止条件：长度小于2后停止
         return array
+    
+    def merge(left, right):
+        result = []
+        while left and right:
+            if left[0] < right[0]:
+                result.append(left.pop(0))
+            else:
+                result.append(right.pop(0))
+        while left:
+            result.append(left.pop(0))
+        while right:
+            result.append(right.pop(0))
+        return result
+    
+    count = len(array)
     middle = count // 2  # 否则递归分左右
     left = merge_sort(array[:middle])
     right = merge_sort(array[middle:])
-    
     return merge(left, right)  # 合并左右
-def merge(left, right):
-    result = []
-    while left and right:
-        if left[0] < right[0]:
-            result.append(left.pop(0))
-        else:
-            result.append(right.pop(0))
-    while left:
-        result.append(left.pop(0))
-    while right:
-        result.append(right.pop(0))
-    return result
 
 
 # 快速排序1
@@ -195,6 +196,21 @@ def quick_sort3(array):
 
 # 堆排序1  （循环版）
 def heap_sort1(array):
+    
+    def shift_down(array, start, end):
+        root = start  # 对每个节点而言，
+        while True:
+            child = 2 * root + 1 # 左子节点
+            if child > end:
+                break
+            if child + 1 <= end and array[child] < array[child + 1]:  # 寻找最大孩子节点
+                child += 1
+            if array[root] < array[child]:  # 交换最大孩子节点和父节点
+                array[root], array[child] = array[child], array[root]
+                root = child  # 循环
+            else:  # 若父节点不小于左右子节点，则退出循环
+                break
+                
     count = len(array)
     for start in range(count // 2 - 1, -1, -1):  # 构建大顶堆，从下往上（最后一个有孩子节点到0）
         shift_down(array, start, count - 1)
@@ -202,23 +218,23 @@ def heap_sort1(array):
         array[0], array[end] = array[end], array[0]
         shift_down(array, 0, end - 1)
     return array
-def shift_down(array, start, end):
-    root = start  # 对每个节点而言，
-    while True:
-        child = 2 * root + 1 # 左子节点
-        if child > end:
-            break
-        if child + 1 <= end and array[child] < array[child + 1]:  # 寻找最大孩子节点
-            child += 1
-        if array[root] < array[child]:  # 交换最大孩子节点和父节点
-            array[root], array[child] = array[child], array[root]
-            root = child  # 循环
-        else:  # 若父节点不小于左右子节点，则退出循环
-            break
+
 
 # 堆排序2  （递归版）
 def heap_sort2(array):
-    global count
+    
+    def heapify(array, i):
+        left = 2 * i + 1
+        right = 2 * i + 2
+        largest = i
+        if left < count and array[left] > array[largest]:
+            largest = left
+        if right < count and array[right] > array[largest]:
+            largest = right
+        if largest != i:
+            array[i], array[largest] = array[largest], array[i]
+            heapify(array, largest)
+            
     count = len(array)
     for i in range(count // 2 - 1, -1, -1):
         heapify(array, i)
@@ -227,17 +243,6 @@ def heap_sort2(array):
         count -= 1
         heapify(array, 0)
     return array
-def heapify(array, i):
-    left = 2 * i + 1
-    right = 2 * i + 2
-    largest = i
-    if left < count and array[left] > array[largest]:
-        largest = left
-    if right < count and array[right] > array[largest]:
-        largest = right
-    if largest != i:
-        array[i], array[largest] = array[largest], array[i]
-        heapify(array, largest)
 
 
 # 计数排序

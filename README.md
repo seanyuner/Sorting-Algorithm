@@ -35,7 +35,8 @@ Since [hustcc](https://github.com/hustcc) had a great [explanation and sorting p
 - 100
 - 1000
 - 10000
-----
+---
 
-## 算法简单阐述（这里以目标序列是递增序列为例）
+## 算法简单阐述
+> 这里以目标序列为递增序列为例说明
 - bubble sort，冒泡排序，

@@ -112,9 +112,10 @@ Since [hustcc](https://github.com/hustcc) had a great [explanation and sorting p
 </p>
 
 ## 算法性能比较
-log: n: array length; p: number of increments; 
+> log: n: array length; p: number of increments; 
+
 |  algotirhms  |average performance| best performance | worst performance | space complexity | in place? |  stabe? | comparison? |
-|:|
+|:--:|
 |  bubble sort |       O(n^2)        |      O(n)        |      o(n^2)       |       O(1)       |  in place |  stable | comparison  |
 | cocktail sort|       O(n^2)        |      O(n)        |      o(n^2)       |       O(1)       |  in place |  stable | comparison  |
 |   comb sort  |       O(n^2/2^p)    |      O(nlogn)    |      o(n^2)       |       O(1)       |  in place | unstable| comparison  |

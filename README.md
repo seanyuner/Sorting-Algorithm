@@ -1,6 +1,6 @@
 # 15 Sorting Algorithms on 6 Different Arrays with 3 Different orders of magnitude data
 
-I write some [sorting algorithms](https://github.com/seanyuner/Sorting-Algorithm/blob/master/sort.py) and visualize their [comparison](https://github.com/seanyuner/Sorting-Algorithm/blob/master/comparison_sorting_algos.ipynb).
+I write some [sorting algorithms](https://github.com/seanyuner/Sorting-Algorithm/blob/master/sort.py) and visualize their [comparison](https://github.com/seanyuner/Sorting-Algorithm/blob/master/comparison_of_sorting_algos.ipynb).
 
 Since [hustcc](https://github.com/hustcc) had a great [explanation and sorting progress visualation](https://github.com/hustcc/JS-Sorting-Algorithm) of the main algorithms, I will focus on their comparison.
 
@@ -36,6 +36,12 @@ Since [hustcc](https://github.com/hustcc) had a great [explanation and sorting p
 - 1000
 - 10000
 ---
+
+
+## 目录
+- [算法原理简单阐述]（https://github.com/seanyuner/Sorting-Algorithm/edit/master/README.md#L46）
+- [算法性能比较初步](https://github.com/seanyuner/Sorting-Algorithm/edit/master/README.md#L120)
+
 
 ## 算法原理简单阐述
 > 这里以目标序列为递增序列为例说明, 动图均源自wikipedia。

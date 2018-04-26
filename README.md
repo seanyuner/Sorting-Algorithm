@@ -39,8 +39,8 @@ Since [hustcc](https://github.com/hustcc) had a great [explanation and sorting p
 
 
 ## 目录
-- [算法原理简单阐述]（https://github.com/seanyuner/Sorting-Algorithm/edit/master/README.md#L46）
-- [算法性能比较初步](https://github.com/seanyuner/Sorting-Algorithm/edit/master/README.md#L120)
+- [算法原理简单阐述]（https://github.com/seanyuner/Sorting-Algorithm/blob/master/README.md#算法原理简单阐述）
+- [算法性能初步比较](https://github.com/seanyuner/Sorting-Algorithm/blob/master/README.md#算法性能初步比较)
 
 
 ## 算法原理简单阐述
@@ -117,7 +117,7 @@ Since [hustcc](https://github.com/hustcc) had a great [explanation and sorting p
 <img src=Images/Representation_of_stack_for_merge_memory_in_Timsort.svg.png height=150>
 </p>
 
-## 算法性能比较
+## 算法性能初步比较
 > log: 2为底; n: 数组元素个数; p: 增量个数; k: 桶数目（基数排序中就是数字位数）
 
 |  algotirhms  |average performance| best performance | worst performance | space complexity | in place? | stable?  |comparison based? |

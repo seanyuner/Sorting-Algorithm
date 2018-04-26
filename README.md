@@ -39,7 +39,7 @@ Since [hustcc](https://github.com/hustcc) had a great [explanation and sorting p
 
 
 ## 目录
-- [算法原理简单阐述]（https://github.com/seanyuner/Sorting-Algorithm/blob/master/README.md#算法原理简单阐述）
+- [算法原理简单阐述](https://github.com/seanyuner/Sorting-Algorithm/blob/master/README.md#算法原理简单阐述)
 - [算法性能初步比较](https://github.com/seanyuner/Sorting-Algorithm/blob/master/README.md#算法性能初步比较)
 
 

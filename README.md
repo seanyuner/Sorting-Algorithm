@@ -37,7 +37,7 @@ Since [hustcc](https://github.com/hustcc) had a great [explanation and sorting p
 - 10000
 ---
 
-## 算法简单阐述
+## 算法原理简单阐述
 > 这里以目标序列为递增序列为例说明, 动图均源自wikipedia。
 - [bubble sort](https://github.com/seanyuner/Sorting-Algorithm/blob/master/sort.py#L1-L12)，冒泡排序。可将数组视为左侧未排序和右侧已排序两部分（初始时全部为未排序），每轮遍历在未排序部分从左往右依次比较两相邻值大小，左边值大则交换位置，则每次遍历后，最大值会自然‘上浮’至未排序部分最右侧，下次遍历时将该值作为已排好序部分第一个元素，循环至未排序部分只剩一个元素则完成排序。可以在每轮遍历时设置一个flag，如果该轮没有发生元素交换，则说明数组已经排好序，可提前结束循环。
 <p align='center'> 
@@ -111,4 +111,7 @@ Since [hustcc](https://github.com/hustcc) had a great [explanation and sorting p
 <img src=Images/Representation_of_stack_for_merge_memory_in_Timsort.svg.png height=150>
 </p>
 
-
+## 算法性能比较
+| algotirhms | average performance | best performance | worst performance | space complexity | in place? | stabe? | comparison? |
+|:-:|
+| bubble sort|       O(n^2)        |      O(n)        |      o(n^2)       |       O(1)       |  in place | stable | comparison  |

@@ -114,20 +114,20 @@ Since [hustcc](https://github.com/hustcc) had a great [explanation and sorting p
 ## 算法性能比较
 > log: 2为底; n: 数组元素个数; p: 增量个数; k: 桶数目（基数排序中就是数字位数）
 
-|  algotirhms  |average performance| best performance | worst performance | space complexity | in place? |  stabe?  |comparison based? |
+|  algotirhms  |average performance| best performance | worst performance | space complexity | in place? | stable?  |comparison based? |
 | :----------: | :---------------: | :--------------: | :---------------: | :--------------: | :--------:| :------: | :--------------: |
 |  bubble sort |       O(n^2)        |      O(n)      |      O(n^2)       |       O(1)       |  in place |  stable  |    comparison    |
 | cocktail sort|       O(n^2)        |      O(n)      |      O(n^2)       |       O(1)       |  in place |  stable  |    comparison    |
-|   comb sort  |       O(n^2/(2^p))  |      O(nlogn)  |      O(n^2)       |       O(1)       |  in place | unstable |    comparison    |
+|   comb sort  |       O(n^2/(2^p))  |    O(nlogn)    |      O(n^2)       |       O(1)       |  in place | unstable |    comparison    |
 |selection sort|       O(n^2)        |      O(n^2)    |      O(n^2)       |       O(1)       |  in place | unstable |    comparison    |
 |doubleselection sort| O(n^2)        |      O(n^2)    |      O(n^2)       |       O(1)       |  in place | unstable |    comparison    |
 |insertion sort|       O(n^2)        |      O(n)      |      O(n^2)       |       O(1)       |  in place |  stable  |    comparison    |
-|  shell sort  |depends on gap sequence |   O(nlogn)  |      O(n(logn)^2) |       O(1)       |  in place | unstable |    comparison    |
+|  shell sort  |depends on gap sequence | O(nlogn)    |      O(n(logn)^2) |       O(1)       |  in place | unstable |    comparison    |
 |  gnome sort  |       O(n^2)        |      O(n)      |      O(n^2)       |       O(1)       |  in place |  stable  |    comparison    |
-|  merge sort  |       O(nlogn)      |      O(nlogn)  |      O(nlogn)     |       O(n)       | out place |  stable  |    comparison    |
-|  quick sort  |       O(nlogn)      |      O(nlogn)  |      O(n^2)       |       O(logn)    |  in place | unstable |    comparison    |
+|  merge sort  |       O(nlogn)      |    O(nlogn)    |      O(nlogn)     |       O(n)       | out place |  stable  |    comparison    |
+|  quick sort  |       O(nlogn)      |    O(nlogn)    |      O(n^2)       |       O(logn)    |  in place | unstable |    comparison    |
 |   heap sort  |       O(nlogn)      |      O(n)      |      O(nlogn)     |       O(1)       |  in place | unstable |    comparison    |
-|counting sort |       O(n+k)        |      O(n+k)    |      O(n+k)       |       O(k)       | out place |   stable |   no comparison  |
-|  bucket sort |       O(n+k)        |      O(n+k)    |      O(n^2)       |       O(n+k)     | out place | unstable |   no comparison  |
-|   radix sort |       O(n\*k)       |      O(n\*k)   |      O(n\*k)      |       O(n+k)     | out place |   stable |   no comparison  |
+|counting sort |       O(n+k)        |     O(n+k)     |      O(n+k)       |       O(k)       | out place |   stable |   no comparison  |
+|  bucket sort |       O(n+k)        |     O(n+k)     |      O(n^2)       |       O(n+k)     | out place | unstable |   no comparison  |
+|   radix sort |       O(n\*k)       |     O(n\*k)    |      O(n\*k)      |       O(n+k)     | out place |   stable |   no comparison  |
 |    tim sort  |       O(nlogn)      |      O(n)      |      O(nlogn)     |       O(n)       | out place |   stable |    comparison    |

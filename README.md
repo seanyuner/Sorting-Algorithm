@@ -130,4 +130,4 @@ Since [hustcc](https://github.com/hustcc) had a great [explanation and sorting p
 |counting sort |       O(n+k)        |     O(n+k)     |      O(n+k)       |       O(k)       | out place |  stable  |   no comparison  |
 |  bucket sort |       O(n+k)        |     O(n+k)     |      O(n^2)       |      O(n+k)      | out place | unstable |   no comparison  |
 |   radix sort |       O(n\*k)       |     O(n\*k)    |     O(n\*k)       |      O(n+k)      | out place |  stable  |   no comparison  |
-|    tim sort  |      O(nlogn)       |      O(n)      |     O(nlogn)      |       O(n)       | out place |  stable  |    comparison    |
+| tim sort | O(nlogn) | O(n) | O(nlogn) | O(n) | out place | stable | comparison |

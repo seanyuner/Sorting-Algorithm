@@ -162,7 +162,7 @@ Since [hustcc](https://github.com/hustcc) had a great [explanation and sorting p
 </p>
 由上图可以观察到：
 - 1.算法对比而言，地精排序、冒泡排序、鸡尾酒排序、选择排序、插入排序、双向选择排序都在100ms以上，其余在100ms以下；
-- 2.计数排序表现最优，在六种序列类型上均可忽略，参考[表格](https://github.com/seanyuner/Sorting-Algorithm/blob/master/sa_times_1000.csv)，归并排序、桶排序、梳排序、sorted排序、基数排序、希尔排序耗时累计都在10ms以下，快排在15ms左右，堆排序在50ms左右。
+- 2.计数排序表现最优，在六种序列类型上均可忽略，参考[表格](https://github.com/seanyuner/Sorting-Algorithm/blob/master/sa_times_1000.csv),归并排序、桶排序、梳排序、sorted排序、基数排序、希尔排序耗时累计都在10ms以下，快排在15ms左右，堆排序在50ms左右。
 <p align='center'>
 <img src=Images/1000_6_line.png>
 </p>

@@ -141,6 +141,7 @@ def gnome_sort(array):
 
 # 归并排序
 def merge_sort(array):
+    count = len(array)
     if count <= 1:  # 递归终止条件：长度小于2后停止
         return array
     
@@ -157,7 +158,6 @@ def merge_sort(array):
             result.append(right.pop(0))
         return result
     
-    count = len(array)
     middle = count // 2  # 否则递归分左右
     left = merge_sort(array[:middle])
     right = merge_sort(array[middle:])

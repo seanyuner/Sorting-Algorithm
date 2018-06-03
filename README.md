@@ -1,6 +1,6 @@
 # 15 Sorting Algorithms on 6 Different Arrays with 3 Different orders of magnitude data
 
-some [sorting algorithms](https://github.com/seanyuner/Sorting-Algorithm/blob/master/sort.py) and visualization of their [comparison](https://github.com/seanyuner/Sorting-Algorithm/blob/master/comparison_of_sorting_algos.ipynb).
+Some [sorting algorithms](https://github.com/seanyuner/Sorting-Algorithm/blob/master/sort.py) and visualization of their [comparison](https://github.com/seanyuner/Sorting-Algorithm/blob/master/comparison_of_sorting_algos.ipynb).
 
 Since [hustcc](https://github.com/hustcc) had a great [explanation and sorting progress visualation](https://github.com/hustcc/JS-Sorting-Algorithm) of the main algorithms, I will focus on their comparison.
 

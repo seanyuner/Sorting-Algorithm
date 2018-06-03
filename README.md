@@ -210,5 +210,5 @@ Since [hustcc](https://github.com/hustcc) had a great [explanation and sorting p
 
 <figure class="half">
     <img src=Images/overall_6_1.png width=500>
-    <img src=images/overall_6_2.png width=500>
+    <img src=Images/overall_6_2.png width=500>
 </figure>

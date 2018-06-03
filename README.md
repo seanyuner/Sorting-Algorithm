@@ -39,11 +39,12 @@ Since [hustcc](https://github.com/hustcc) had a great [explanation and sorting p
 
 
 ## 目录
-- [算法原理简单阐述](https://github.com/seanyuner/Sorting-Algorithm/blob/master/README.md#算法原理简单阐述)
-- [算法性能初步比较](https://github.com/seanyuner/Sorting-Algorithm/blob/master/README.md#算法性能初步比较)
+- [算法原理简述](https://github.com/seanyuner/Sorting-Algorithm/blob/master/README.md#算法原理简述)
+- [算法性能比较](https://github.com/seanyuner/Sorting-Algorithm/blob/master/README.md#算法性能比较)
+- [算法排序对比](https://github.com/seanyuner/Sorting-Algorithm/blob/master/README.md#算法排序对比)
 
 
-## 算法原理简单阐述
+## 算法原理简述
 > 这里以目标序列为递增序列为例说明, 动图均源自wikipedia。
 - [bubble sort](https://github.com/seanyuner/Sorting-Algorithm/blob/master/sort.py#L4-L15)，冒泡排序。可将数组视为左侧未排序和右侧已排序两部分（初始时全部为未排序），每轮遍历在未排序部分从左往右依次比较两相邻值大小，左边值大则交换位置，则每次遍历后，最大值会自然‘上浮’至未排序部分最右侧，下次遍历时将该值作为已排好序部分第一个元素，循环至未排序部分只剩一个元素则完成排序。可以在每轮遍历时设置一个flag，如果该轮没有发生元素交换，则说明数组已经排好序，可提前结束循环。
 <p align='center'> 
@@ -117,7 +118,7 @@ Since [hustcc](https://github.com/hustcc) had a great [explanation and sorting p
 <img src=Images/Representation_of_stack_for_merge_memory_in_Timsort.svg.png height=150>
 </p>
 
-## 算法性能初步比较
+## 算法性能比较
 > log: 2为底; n: 数组元素个数; p: 增量个数; k: 桶数目（基数排序中就是数字位数）
 
 |  algotirhms  |average performance| best performance | worst performance | space complexity | in place? | stable?  |comparison based? |
@@ -137,3 +138,13 @@ Since [hustcc](https://github.com/hustcc) had a great [explanation and sorting p
 | bucket sort | O(n+k) | O(n+k) | O(n^2) | O(n+k) | out place | unstable | no comparison  |
 | radix sort | O(n\*k) |  O(n\*k) | O(n\*k) | O(n+k) | out place | stable | no comparison |
 | tim sort | O(nlogn) | O(n) | O(nlogn) | O(n) | out place | stable | comparison |
+
+## 算法排序对比
+> 如前所述，这里对比了一共15种排序算法，6种不同类型数据（随机、正序、几乎正序、逆序、密集、稀疏），3种数量级（100、1000、10000）元素，每一种类型的排序均运行5次取平均结果，即一共运行了15\*6\*3\*5=1350次排序。
+
+1. 100元素
+ <p align='center'>
+<img src=Images/100_elements.png>
+</p>
+由此可以观察道德是：
+ - 

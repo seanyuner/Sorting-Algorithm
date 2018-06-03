@@ -144,11 +144,11 @@ Since [hustcc](https://github.com/hustcc) had a great [explanation and sorting p
 ## 实际排序比较
 如前所述，这里对比了一共15种排序算法，6种不同序列类型（随机、正序、几乎正序、逆序、密集、稀疏）（一直没有想好用什么词语定义这六种，以下暂以“序列类型”代指这六种分布），3种数量级（100、1000、10000）元素，每一次排序均运行5次取平均结果，即一共运行了15\*6\*3\*5=1350次排序；
 
-在这里，参与排序的元素均取为从0开始的非负整数，默认最大值M等于参与排序元素数量N，“几乎正序”序列中乱序比例${\alpha}$为0.02，“密集”序列中最大值缩减系数 \beta 为0.1，“稀疏”序列中最大值放大系数 $\gamma$ 为10，这些参数在程序中均可以直接调节；
+在这里，参与排序的元素均取为从0开始的非负整数，默认最大值M等于参与排序元素数量N，“几乎正序”序列中乱序比例alpha为0.02，“密集”序列中最大值缩减系数beta为0.1，“稀疏”序列中最大值放大系数gamma为10，这些参数在程序中均可以直接调节；
 
 算法运行在MSI笔记本上（GL62VR 7RFX-1017CN，WIN10系统，i5-7300HQ，2.5GHz）。
 
-### 1. 100元素
+### 1. N=100
 <p align='center'>
 <img src=Images/100_elements.png>
 </p>
@@ -159,7 +159,7 @@ Since [hustcc](https://github.com/hustcc) had a great [explanation and sorting p
 3. 值得注意的是，每次出现耗时>0的排序，耗时几乎一致（实际上都在3.120ms - 3.131ms之间）;
 4. 另外，由于参与排序元素的个数较少，可能存在的偶然性比较大，这一组数据仅供参考。
   
- ### 2. 1000元素
+ ### 2. N=1000
 <p align='center'>
 <img src=Images/1000_elements_bar.png>
 </p>
@@ -167,7 +167,6 @@ Since [hustcc](https://github.com/hustcc) had a great [explanation and sorting p
 
 1. 算法对比而言，地精排序、冒泡排序、鸡尾酒排序、选择排序、插入排序、双向选择排序都在100ms以上，其余在100ms以下；
 2. 计数排序表现最优，在六种序列类型上均可忽略，参考[表格](https://github.com/seanyuner/Sorting-Algorithm/blob/master/sa_times_1000.csv)，归并排序、桶排序、梳排序、sorted排序、基数排序、希尔排序耗时累计都在10ms以下，快排在15ms左右，堆排序在50ms左右。
-
 
 <p align='center'>
 <img src=Images/1000_6_line.png>
@@ -184,7 +183,7 @@ Since [hustcc](https://github.com/hustcc) had a great [explanation and sorting p
 2. 不同算法对序列类型有着不同的“敏感程度”，比如地精排序、鸡尾酒排序在正序和几乎正序的序列上表现和众多算法相差无几，但是在逆序时表现非常大，对于二者而言，这也是它们表现最差的情形；但是计数排序等累计耗时小于10ms的算法，对类型均并不太敏感；
 3. 其中也存在其他有意思的点，比如一般算法逆序表现都会比几乎正序要差，但是双向选择排序却相反，这是由于...
   
-### 3. 10000元素
+### 3. N=10000
 <p align='center'>
 <img src=Images/10000_elements.png>
 </p>
@@ -193,14 +192,9 @@ Since [hustcc](https://github.com/hustcc) had a great [explanation and sorting p
 1. 算法对比上，和1000元素的排序基本一致，地精排序、冒泡排序、鸡尾酒排序、插入排序、选择排序、双向选择排序最慢，在一个数量级，均在10000ms以上，其余排序时间均在500以下，其中100ms以下有三种，依次为：sorted排序（约16.3ms）、计数排序（约56.1ms）、基数排序（约94.7ms）；
 2. python自带sorted排序的强大由此可见，10000个元素的五种排序时间和也仅仅只有16.3ms，并且其对于随机、正序、几乎正序三种序列类型耗时均可忽略，在逆序序列也仅耗时0.68ms，在稀疏序列耗时为10.41ms，基本为密集序列耗时5.22ms的两倍。
 
-
 <p align='center'>
 <img src=Images/10000_6_line.png>
-</p>
-<p align='center'>
 <img src=Images/10000_6_pie.png>
-</p>
-<p align='center'>
 <img src=Images/10000_6_pie2.png>
 </p>
 由上图可以看出：
@@ -216,4 +210,4 @@ Since [hustcc](https://github.com/hustcc) had a great [explanation and sorting p
 
 1. 地精排序、冒泡排序、鸡尾酒排序、插入排序、选择排序、双向选择排序最慢，10000元素耗时均在10000ms以上，1000元素耗时均在100ms以上，其次是快速排序、归并排序、希尔排序、堆排序、梳排序、桶排序，10000元素耗时在100ms - 500ms之间，sorted排序、计数排序、基数排序是最快的三种排序;
 2. 由于三种数据量级是相邻的数量级，图片纵轴也是数量级，因此比较不同算法在纵向三个值之间的两个差值变化，可以将其作为算法对数量级的“敏感程度”的一个参考。比如，可以看到归并排序对数量级非常“敏感”，随着数量级的增大，耗时急剧增大，而冒泡排序、鸡尾酒排序、选择排序等则“敏感”程度较低，另外，对于堆排序、快速排序等，虽然对数量级也较为“敏感”，但其趋势是随着数量级的增大，耗时相对来说有所减少。
-3. 更多详细的图标参见[ipynb文件](https://github.com/seanyuner/Sorting-Algorithm/blob/master/comparison_of_sorting_algos.ipynb)
+3. 更多详细的对比图表参见[ipynb文件](https://github.com/seanyuner/Sorting-Algorithm/blob/master/comparison_of_sorting_algos.ipynb)

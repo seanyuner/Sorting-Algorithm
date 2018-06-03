@@ -39,16 +39,16 @@ Since [hustcc](https://github.com/hustcc) had a great [explanation and sorting p
 
 
 ## 目录
-- [算法原理简述](https://github.com/seanyuner/Sorting-Algorithm/blob/master/README.md#算法原理简述)
-- [算法性能比较](https://github.com/seanyuner/Sorting-Algorithm/blob/master/README.md#算法性能比较)
-- [实际排序比较](https://github.com/seanyuner/Sorting-Algorithm/blob/master/README.md#实际排序比较)
-   - [N=100](https://github.com/seanyuner/Sorting-Algorithm/blob/master/README.md#1-n100)
-   - [N=1000](https://github.com/seanyuner/Sorting-Algorithm/blob/master/README.md#2-n1000)
-   - [N=10000](https://github.com/seanyuner/Sorting-Algorithm/blob/master/README.md#3-n10000)
-   - [overall](https://github.com/seanyuner/Sorting-Algorithm/blob/master/README.md#4-overall)
+- [1. 算法原理简述](https://github.com/seanyuner/Sorting-Algorithm/blob/master/README.md#1-算法原理简述)
+- [2. 算法性能比较](https://github.com/seanyuner/Sorting-Algorithm/blob/master/README.md#2-算法性能比较)
+- [3. 实际排序比较](https://github.com/seanyuner/Sorting-Algorithm/blob/master/README.md#3-实际排序比较)
+   - [3.1 N=100](https://github.com/seanyuner/Sorting-Algorithm/blob/master/README.md#1-n100)
+   - [3.2 N=1000](https://github.com/seanyuner/Sorting-Algorithm/blob/master/README.md#2-n1000)
+   - [3.3 N=10000](https://github.com/seanyuner/Sorting-Algorithm/blob/master/README.md#3-n10000)
+   - [3.4 overall](https://github.com/seanyuner/Sorting-Algorithm/blob/master/README.md#4-overall)
 
 
-## 算法原理简述
+## 1. 算法原理简述
 > 这里以目标序列为递增序列为例说明, 动图均源自wikipedia。
 - [bubble sort](https://github.com/seanyuner/Sorting-Algorithm/blob/master/sort.py#L4-L15)，冒泡排序。可将数组视为左侧未排序和右侧已排序两部分（初始时全部为未排序），每轮遍历在未排序部分从左往右依次比较两相邻值大小，左边值大则交换位置，则每次遍历后，最大值会自然‘上浮’至未排序部分最右侧，下次遍历时将该值作为已排好序部分第一个元素，循环至未排序部分只剩一个元素则完成排序。可以在每轮遍历时设置一个flag，如果该轮没有发生元素交换，则说明数组已经排好序，可提前结束循环。
 <p align='center'> 
@@ -123,7 +123,7 @@ Since [hustcc](https://github.com/hustcc) had a great [explanation and sorting p
 </p>
 
 
-## 算法性能比较
+## 2. 算法性能比较
 > log: 2为底; n: 数组元素个数; p: 增量个数; k: 桶数目（基数排序中就是数字位数）
 
 |  algotirhms  |average performance| best performance | worst performance | space complexity | in place? | stable?  |comparison based? |
@@ -145,14 +145,14 @@ Since [hustcc](https://github.com/hustcc) had a great [explanation and sorting p
 | tim sort | O(nlogn) | O(n) | O(nlogn) | O(n) | out place | stable | comparison |
 
 
-## 实际排序比较
+## 3. 实际排序比较
 如前所述，这里对比了一共15种排序算法，6种不同序列类型（随机、正序、几乎正序、逆序、密集、稀疏）（一直没有想好用什么词语定义这六种，以下暂以“序列类型”代指这六种分布），3种数量级（100、1000、10000）元素，每一次排序均运行5次取平均结果，即一共运行了15\*6\*3\*5=1350次排序；
 
 在这里，参与排序的元素均取为从0开始的非负整数，默认最大值M等于参与排序元素数量N，“几乎正序”序列中乱序比例alpha为0.02，“密集”序列中最大值缩减系数beta为0.1，“稀疏”序列中最大值放大系数gamma为10，这些参数在程序中均可以直接调节；
 
 算法运行在MSI笔记本上（GL62VR 7RFX-1017CN，WIN10系统，i5-7300HQ，2.5GHz）。
 
-### 1. N=100
+### 3.1 N=100
 <p align='center'>
 <img src=Images/100_elements.png>
 </p>
@@ -163,7 +163,7 @@ Since [hustcc](https://github.com/hustcc) had a great [explanation and sorting p
 3. 值得注意的是，每次出现耗时>0的排序，耗时几乎一致（实际上都在3.120ms - 3.131ms之间）;
 4. 另外，由于参与排序元素的个数较少，可能存在的偶然性比较大，这一组数据仅供参考。
   
- ### 2. N=1000
+ ### 3.2 N=1000
 <p align='center'>
 <img src=Images/1000_elements_bar.png>
 </p>
@@ -187,7 +187,7 @@ Since [hustcc](https://github.com/hustcc) had a great [explanation and sorting p
 2. 不同算法对序列类型有着不同的“敏感程度”，比如地精排序、鸡尾酒排序在正序和几乎正序的序列上表现和众多算法相差无几，但是在逆序时表现非常大，对于二者而言，这也是它们表现最差的情形；但是计数排序等累计耗时小于10ms的算法，对类型均并不太敏感；
 3. 其中也存在其他有意思的点，比如一般算法逆序表现都会比几乎正序要差，但是双向选择排序却相反，这是由于...
   
-### 3. N=10000
+### 3.3 N=10000
 <p align='center'>
 <img src=Images/10000_elements.png>
 </p>
@@ -206,7 +206,7 @@ Since [hustcc](https://github.com/hustcc) had a great [explanation and sorting p
 1. 和1000元素情形基本相同，序列类型上，逆序最慢，随机、密集、稀疏其次，正序和几乎正序最快；
 2. 相比于1000元素而言，由于数据量增大，我们对于各种算法在不同序列类型上的表现可以有更令人信服的比较，具体而言，如扇形图所示：选择排序、双向选择排序、基数排序对序列类型“敏感程度”最低，几乎完全一致，梳排序、希尔排序、归并排序、堆排序次之，冒泡排序、快速排序、桶排序再次之，鸡尾酒排序、插入排序、地精排序、计数排序、sorted排序对数据最“敏感”。（此处sorted排序、计数排序等由于耗时较短，其“敏感”程度结论只是基于以有数据得出，理论上应该进行对其更多元素的排序实验）
 
-### 4. overall
+### 3.4 overall
 <p align='center'>
 <img src=Images/overall.png>
 </p>

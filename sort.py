@@ -84,7 +84,7 @@ def double_selection_sort(array):
             array[count - 1 - i], array[max_index] = \
                         array[max_index], array[count - 1 - i]
             array[i], array[min_index] = array[min_index], array[i]
-        # 特殊情况2：count-1-i为最小位置，但i不是最小位置，需先交换最小位置
+        # 特殊情况3：count-1-i为最小位置，但i不是最小位置，需先交换最小位置
         #elif max_index != i and min_index == count - 1 - i:
          #   array[i], array[min_index] = array[min_index], array[i]
           #  array[count - 1 - i], array[max_index] = \

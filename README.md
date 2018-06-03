@@ -42,10 +42,10 @@ Since [hustcc](https://github.com/hustcc) had a great [explanation and sorting p
 - [1. 算法原理简述](https://github.com/seanyuner/Sorting-Algorithm/blob/master/README.md#1-算法原理简述)
 - [2. 算法性能比较](https://github.com/seanyuner/Sorting-Algorithm/blob/master/README.md#2-算法性能比较)
 - [3. 实际排序比较](https://github.com/seanyuner/Sorting-Algorithm/blob/master/README.md#3-实际排序比较)
-   - [3.1 N=100](https://github.com/seanyuner/Sorting-Algorithm/blob/master/README.md#1-n100)
-   - [3.2 N=1000](https://github.com/seanyuner/Sorting-Algorithm/blob/master/README.md#2-n1000)
-   - [3.3 N=10000](https://github.com/seanyuner/Sorting-Algorithm/blob/master/README.md#3-n10000)
-   - [3.4 overall](https://github.com/seanyuner/Sorting-Algorithm/blob/master/README.md#4-overall)
+   - [3.1 N=100](https://github.com/seanyuner/Sorting-Algorithm/blob/master/README.md#31-n100)
+   - [3.2 N=1000](https://github.com/seanyuner/Sorting-Algorithm/blob/master/README.md#32-n1000)
+   - [3.3 N=10000](https://github.com/seanyuner/Sorting-Algorithm/blob/master/README.md#33-n10000)
+   - [3.4 overall](https://github.com/seanyuner/Sorting-Algorithm/blob/master/README.md#34-overall)
 
 
 ## 1. 算法原理简述

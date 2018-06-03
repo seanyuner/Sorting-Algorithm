@@ -1,18 +1,21 @@
-# 冒泡排序 
+import random
+from time import time
+
+# 1.冒泡排序 
 def bubble_sort(array):   
     count = len(array)
     for i in range(count - 1):
-        flag = True  # 如果本次循环没有交换，说明已经排好
+        flag = True  # 如果本次循环没有交换，说明已经排好序
         for j in range(count - 1 - i):
             if array[j] > array[j + 1]:
                 array[j], array[j + 1] = array[j + 1], array[j]
                 flag = False
         if flag:
-            return array
+            break
     return array
 
 
-# 鸡尾酒排序 (略微改进版冒泡排序，每次同时找最大和最小值)
+# 2.鸡尾酒排序 (略微改进版冒泡排序，每次同时找最大和最小值)
 def cocktail_sort(array):
     count = len(array)
     flag = True  # 如果本次循环没有交换，说明已经排好
@@ -31,7 +34,7 @@ def cocktail_sort(array):
     return array
 
 
-# 梳排序 （改良的冒泡算法，分组冒泡，又类似shell排序）
+# 3.梳排序 （改良的冒泡算法，分组冒泡，又类似shell排序）
 def comb_sort(array):
     count = len(array)
     RATE = 1.3
@@ -50,7 +53,7 @@ def comb_sort(array):
     return array
 
 
-# 选择排序
+# 4.选择排序
 def selection_sort(array):
     count = len(array)  
     for i in range(count - 1):
@@ -63,7 +66,7 @@ def selection_sort(array):
     return array
 
 
-# 双向选择排序          
+# 5.双向选择排序          
 def double_selection_sort(array):
     count = len(array)  
     for i in range(count // 2 + 1):
@@ -84,12 +87,12 @@ def double_selection_sort(array):
             array[count - 1 - i], array[max_index] = \
                         array[max_index], array[count - 1 - i]
             array[i], array[min_index] = array[min_index], array[i]
-        # 特殊情况3：count-1-i为最小位置，但i不是最小位置，需先交换最小位置
+        # 特殊情况3：count-1-i为最小位置，但i不是最大位置，需先交换最小位置
         #elif max_index != i and min_index == count - 1 - i:
          #   array[i], array[min_index] = array[min_index], array[i]
           #  array[count - 1 - i], array[max_index] = \
            #             array[max_index], array[count - 1 - i]
-        # 普通情况：i, count-1-i均不是最值位置，交换次序不限，此时也可随便合并到2/3
+        # 普通情况：i, count-1-i均不是最值位置，交换次序不限，此时可随便合并到2/3
         else:
             array[i], array[min_index] = array[min_index], array[i]
             array[count - 1 - i], array[max_index] = \
@@ -97,7 +100,7 @@ def double_selection_sort(array):
     return array
 
 
-# 插入排序
+# 6.插入排序
 def insertion_sort(array):
     count = len(array)
     for i in range(1, count):  # 列表左侧已排好序，右侧逐个插入左侧合适处， 扑克牌
@@ -110,7 +113,7 @@ def insertion_sort(array):
     return array
 
 
-# 希尔排序（缩小增量排序Diminishing Increment Sort）
+# 7.希尔排序（缩小增量排序Diminishing Increment Sort）
 def shell_sort(array):
     count = len(array)
     gap = count // 2  # 初始化增量
@@ -126,20 +129,20 @@ def shell_sort(array):
     return array
 
 
-# 地精排序
+# 8.地精排序
 def gnome_sort(array):
     count = len(array)
     i = 0
     while i < count:
-        if i == 0 or array[i - 1] <= array[i]:  #等于0或者正序则递增寻找后面逆序
+        if i == 0 or array[i - 1] <= array[i]:  # 等于0或者正序则递增寻找后面逆序
             i += 1
-        else:  # 找到逆序后交换，并继续比较前面已排好元素 
+        else:  # 找到逆序后交换，并继续比较前面已排好元素
             array[i - 1], array[i] = array[i], array[i - 1]
             i -= 1
     return array
 
 
-# 归并排序
+# 9.归并排序
 def merge_sort(array):
     count = len(array)
     if count <= 1:  # 递归终止条件：长度小于2后停止
@@ -164,13 +167,13 @@ def merge_sort(array):
     return merge(left, right)  # 合并左右
 
 
-# 快速排序1
+# 10.快速排序1
 quick_sort1 = lambda array: array if len(array) <= 1 else \
               quick_sort1([item for item in array[1:] if item <= array[0]]) + \
               [array[0]] + \
               quick_sort1([item for item in array[1:] if item > array[0]])
 
-# 快速排序2
+# 10.快速排序2
 def quick_sort2(array):
     if len(array) <= 1:   # 递归终止条件：长度小于2后停止
         return array
@@ -179,7 +182,7 @@ def quick_sort2(array):
            [pivot] + \
            quick_sort2([x for x in array[1:] if x >= pivot])
 
-# 快速排序3
+# 10.快速排序3
 def quick_sort3(array):
     if len(array) <= 1:
         return array
@@ -194,7 +197,7 @@ def quick_sort3(array):
     return quick_sort3(left) + [pivot] + quick_sort3(right)
 
 
-# 堆排序1  （循环版）
+# 11.堆排序1  （循环版）
 def heap_sort1(array):
     
     def shift_down(array, start, end):
@@ -220,7 +223,7 @@ def heap_sort1(array):
     return array
 
 
-# 堆排序2  （递归版）
+# 11.堆排序2  （递归版）
 def heap_sort2(array):
     
     def heapify(array, i):
@@ -245,7 +248,7 @@ def heap_sort2(array):
     return array
 
 
-# 计数排序
+# 12.计数排序
 def counting_sort(array):
     min_ = 2**31  # 寻找列表的最大值和最小值
     max_ = 0
@@ -266,17 +269,14 @@ def counting_sort(array):
     return array
 
 
-# 桶排序
-import math
+# 13.桶排序
 def bucket_sort(array):
     count = len(array)
     min_ = min(array)
     max_ = max(array)
-    num_buckets = int(count ** 0.5)
+    num_buckets = int(count ** 0.5)  # 设置桶数量
     buckets = [[] for i in range(num_buckets)]
     step = (max_ - min_) // num_buckets + 1
-    # step = math.ceil((max_ - min_) / num_buckets)
-    # max_ += 1
     for i in array:
         buckets[(i - min_) // step].append(i)
     array = []
@@ -285,7 +285,7 @@ def bucket_sort(array):
     return array
     
 
-# 基数排序
+# 14.基数排序
 def radix_sort(array):
     for k in range(len(str(max(array)))):  # 从低位到高位依次遍历
         s = [[] for i in range(10)]  # 十进制：十种数字0-9
@@ -295,10 +295,7 @@ def radix_sort(array):
     return array
 
 
-import random
-from time import time
-
-
+# 运行排序
 def run_sort(sort, array):
     # print('original array: ', array)
     start = time()
@@ -365,19 +362,21 @@ if __name__=="__main__":
                           counting_sort, bucket_sort, radix_sort, \
                           sorted]
     
-    times = [[[] for i in range(A)] for j in range(T)]
+    # 记录每次排序的详细数据
+    times = [[[] for j in range(A)] for k in range(T)]
     
-    for j in range(T):
-        print("Running time %d......." % (j+1))
+    for k in range(T):
+        print("Running time %d......." % (k+1))
         arr_names, arrs = gene_data(N, M, alpha, beta, gamma)
-        for i in range(A):
-            print('On %s.' % arr_names[i])
+        for j in range(A):
+            print('On %s.' % arr_names[j])
             for sa in sorting_algorithms:
-                times[j][i].append(run_sort(sa, arrs[i].copy()))
+                times[k][j].append(run_sort(sa, arrs[j].copy()))
             print('\n')
         print('\n\n\n')
         
-    times_avg = [[] for i in range(A)]
+    # 对T次求平均
+    times_avg = [[] for j in range(A)]
     for i in range(len(sorting_algorithms)):
         for j in range(A):
             time = 0
@@ -386,6 +385,7 @@ if __name__=="__main__":
             times_avg[j].append(time / T * 1000)   # ms
             # times_avg[j].append(time / T * 1000 if N <=1000 else time / T)
 
+    # 保存为csv
     s = 'sorting_algos'
     for arr_name in arr_names:
         s += ',' + arr_name

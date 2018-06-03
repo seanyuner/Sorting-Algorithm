@@ -208,6 +208,6 @@ Since [hustcc](https://github.com/hustcc) had a great [explanation and sorting p
 这正是本页最上面的一张图，每个数据点是六种排序的时间和，反映了15种排序算法分别在三种数量级下的综合表现对比。可以看到：地精排序、冒泡排序、鸡尾酒排序、插入排序、选择排序、双向选择排序最慢，10000元素耗时均在10000ms以上，1000元素耗时均在100ms以上，其次是快速排序、归并排序、希尔排序、堆排序、梳排序、桶排序，10000元素耗时在100ms - 500ms之间，sorted排序、计数排序、基数排序是最快的三种排序。
 
 
-<p align='center'>
+<p>
 <img src=Images/overall_6_1.png> <img src=Images/overall_6_2.png>
 </p>

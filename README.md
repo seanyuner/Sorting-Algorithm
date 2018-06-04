@@ -152,7 +152,7 @@ Since [hustcc](https://github.com/hustcc) had a great [explanation and sorting p
 
 ### 3.1 N=100
 <p align='center'>
-   <img src=Images/excel_100.jpg>
+   <img src=Images/excel_100.JPG>
    <img src=Images/100_elements.png>
 </p>
 由上图可以观察到：
@@ -164,7 +164,7 @@ Since [hustcc](https://github.com/hustcc) had a great [explanation and sorting p
   
  ### 3.2 N=1000
 <p align='center'>
-   <img src=Images/excel_1000.jpg>
+   <img src=Images/excel_1000.JPG>
    <img src=Images/1000_elements_bar.png>
 </p>
 由上图可以观察到：
@@ -185,7 +185,7 @@ Since [hustcc](https://github.com/hustcc) had a great [explanation and sorting p
   
 ### 3.3 N=10000
 <p align='center'>
-   <img src=Images/excel_10000.jpg>
+   <img src=Images/excel_10000.JPG>
    <img src=Images/10000_elements.png>
 </p>
 由上图可以看出：

@@ -1,4 +1,4 @@
-# 15 Sorting Algorithms on 6 Different Arrays with 3 Different orders of magnitude data
+# 15 Sorting Algorithms on 6 Different Kinds of Arrays with 3 Different orders of magnitude data
 
 Some [sorting algorithms](https://github.com/seanyuner/Sorting-Algorithm/blob/master/sort.py) and visualization of their [comparison](https://github.com/seanyuner/Sorting-Algorithm/blob/master/comparison_of_sorting_algos.ipynb).
 
@@ -23,7 +23,7 @@ Since [hustcc](https://github.com/hustcc) had a great [explanation and sorting p
 - radix sort
 - sorted (python3 build in timsort)
 
-**6 different arrays:**
+**6 different kinds of arrays:**
 - random array
 - ascending array (asc_array)
 - almost ascending array (alm_asc_array)

@@ -1,4 +1,4 @@
-# 15 Sorting Algorithms on 6 Different Kinds of Arrays with 3 Different orders of Magnitude of Data
+# 15 Sorting Algorithms on 6 Different Kinds of Arrays with 3 Different Orders of Magnitude of Data
 
 Some [sorting algorithms](https://github.com/seanyuner/Sorting-Algorithm/blob/master/sort.py) and visualization of their [comparison](https://github.com/seanyuner/Sorting-Algorithm/blob/master/comparison_of_sorting_algos.ipynb).
 

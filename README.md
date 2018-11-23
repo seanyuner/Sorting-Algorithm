@@ -1,4 +1,4 @@
-# 15 Sorting Algorithms on 6 Different Kinds of Arrays with 3 Different orders of magnitude data
+# 15 Sorting Algorithms on 6 Different Kinds of Arrays with 3 Different orders of Magnitude of Data
 
 Some [sorting algorithms](https://github.com/seanyuner/Sorting-Algorithm/blob/master/sort.py) and visualization of their [comparison](https://github.com/seanyuner/Sorting-Algorithm/blob/master/comparison_of_sorting_algos.ipynb).
 
@@ -31,7 +31,7 @@ Since [hustcc](https://github.com/hustcc) had a great [explanation and sorting p
 - dense array
 - sparse array
 
-**3 different orders of magnitude data:**
+**3 different orders of magnitude of data:**
 - 100
 - 1000
 - 10000
